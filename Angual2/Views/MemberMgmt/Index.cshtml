@@ -1,0 +1,19 @@
+﻿@model List<Member>
+
+<h1> Member List </h1>
+
+<ul>
+    @foreach (var member in Model)
+    {
+        <li>
+            @member.Id  @member.Name
+        </li>
+    }
+</ul>
+
+<br/>
+
+<form action="/api/MemberMgmt/Add" method="post">
+    Member Name: <input type="text" name="MemberName" id="MemberName" />
+    <input type="submit" value=" Add" />
+</form>

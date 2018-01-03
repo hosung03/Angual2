@@ -1,0 +1,16 @@
+﻿<h1>Member Management</h1>
+
+<ul>
+    <li *ngFor="let member of members">
+        {{member.id}} - {{member.name}}
+    </li>
+</ul>
+
+<br />
+
+<form class="form-horizontal" role="form" #form="ngForm">
+    Member Name: <input type="text" name="MemberName" id="MemberName" [ngModel]="MemberName" />
+    <button class="btn btn-default" (click) ="doSave(form.value)">Add</button>
+</form>
+<!--{{ form.value | json }}-->
+

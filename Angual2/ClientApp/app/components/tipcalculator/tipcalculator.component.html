@@ -1,0 +1,13 @@
+﻿<h1>Tip Calculator</h1>
+
+<form #frm="ngForm">
+    <p>Price&nbsp;&nbsp;:&nbsp;<input type="text" name="price" [(ngModel)]="price" (blur)="onCount()" /></p>
+    <p>Tip(%):&nbsp;<input type="text" name="tip" [(ngModel)]="tip" (blur)="onCount()" /></p>
+</form>
+<br />
+<div *ngIf="msg !== ''">
+    {{ msg }}
+</div>
+<br />
+<tip-evaluation [tip]="tip"></tip-evaluation>
+
